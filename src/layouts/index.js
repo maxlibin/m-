@@ -76,30 +76,6 @@ const Styles = {
     overflow: "auto",
     wordWrap: "break-word",
   }),
-
-  footerContainer: css({
-    textAlign: "center",
-    padding: "20px 0",
-  }),
-
-  telegramButton: css({
-    borderRadius: "3px",
-    backgroundColor: "rgb(0, 93, 142)",
-    padding: "10px 20px",
-    display: "inline-block",
-    margin: "0 auto",
-    fontWeight: "bold",
-
-    ":hover": {
-      color: "#ccc",
-    },
-  }),
-
-  telegramButtonImg: css({
-    width: "20px",
-    marginRight: "10px",
-    verticalAlign: "middle",
-  }),
 }
 
 class DefaultLayout extends Component {

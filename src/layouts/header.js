@@ -1,13 +1,10 @@
 import React, { Component } from "react"
 import { css } from "glamor"
+import { description } from "../Const"
 
 import Logo from "../components/Logo"
 
 const Styles = {
-  content: css({
-    marginBottom: "80px",
-  }),
-
   header: css({
     width: "100%",
     padding: "100px 0 80px 0",
@@ -15,6 +12,10 @@ const Styles = {
 
   block: css({
     display: "block",
+  }),
+
+  about: css({
+    marginBottom: "0",
   }),
 
   symbol: css({
@@ -37,27 +38,6 @@ const Styles = {
         marginLeft: 0,
       },
     },
-  }),
-
-  readMore: css({
-    opacity: 0.8,
-    fontSize: "20px",
-  }),
-
-  arrowRight: css({
-    width: "25px",
-    display: "inline-block",
-    position: "relative",
-    top: "6px",
-    left: "10px",
-
-    "> svg": {
-      width: "100%",
-    },
-  }),
-
-  navLink: css({
-    marginBottom: "60px",
   }),
 }
 
@@ -82,8 +62,8 @@ class Header extends Component {
             </a>
           </div>
         </div>
-        <h2>About:</h2>
-        <p>I am based in Singapore, have a project you'd like to discuss?</p>
+        <h2 className={Styles.about}>About:</h2>
+        <p>{description}</p>
         <ul className={Styles.social}>
           <li>
             <a

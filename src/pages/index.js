@@ -8,6 +8,8 @@ import Header from "../layouts/header"
 const Styles = {
   content: css({
     marginBottom: "80px",
+    borderBottom: "1px solid #16141b",
+    paddingBottom: "80px",
   }),
 
   readMore: css({
