@@ -1,50 +1,40 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "maxlibin.com",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "maxlibin.com website",
   "version": "0.1.0",
   "dependencies": {
-    "gatsby": "^2.19.32",
-    "gatsby-image": "^2.2.43",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "autoprefixer": "^10.4.12",
+    "gatsby": "^4.24.5",
+    "gatsby-image": "^3.11.0",
     "gatsby-paginate": "^1.1.1",
-    "gatsby-plugin-favicon": "^3.1.6",
-    "gatsby-plugin-feed": "^2.3.28",
-    "gatsby-plugin-glamor": "^2.1.21",
-    "gatsby-plugin-google-analytics": "^2.1.37",
-    "gatsby-plugin-manifest": "^2.2.44",
-    "gatsby-plugin-offline": "^3.0.37",
-    "gatsby-plugin-react-helmet": "^3.1.23",
-    "gatsby-plugin-sharp": "^2.4.7",
-    "gatsby-source-filesystem": "^2.1.50",
-    "gatsby-source-wordpress": "^3.1.65",
-    "gatsby-transformer-sharp": "^2.3.17",
-    "glamor": "^2.20.40",
-    "lodash": "^4.17.15",
-    "prop-types": "^15.7.2",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
-    "react-helmet": "^5.2.1"
+    "gatsby-plugin-emotion": "^7.24.0",
+    "gatsby-plugin-postcss": "^5.24.0",
+    "gatsby-source-wordpress": "^6.24.0",
+    "postcss": "^8.4.18",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "tailwindcss": "^3.2.1"
   },
   "devDependencies": {
+    "gatsby-cli": "^4.24.0",
     "prettier": "^1.19.1"
   },
-  "keywords": [
-    "gatsby"
-  ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "serve": "gatsby serve"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
+  "repository": "https://github.com/maxlibin/m-gatsby",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+    "url": "https://github.com/maxlibin/m-gatsby"
+  },
+  "main": "index.js",
+  "author": "max <me@maxlibin.com>"
 }
