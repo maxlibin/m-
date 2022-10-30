@@ -2,8 +2,23 @@ import React from "react"
 import Layout from "../components/layout"
 import {graphql} from "gatsby"
 
-export default function BlogPost({data}) {
-  const {title, content, date} = data.allWpPost.nodes[0]
+type node = {
+  content: string,
+  date: string,
+  title: string
+}
+
+type post = {
+  data: {
+    allWpPost: {
+      nodes: Array<node>
+    }
+  }
+}
+
+const BlogPost = ({data}: post) => {
+  const {allWpPost: {nodes: [{title, content, date}]}} = data;
+
   return (
     <Layout>
       <div className="post">
@@ -28,3 +43,5 @@ export const query = graphql`
     }
   }
 `
+
+export default BlogPost;

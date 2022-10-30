@@ -4,7 +4,6 @@ import Layout from "../components/layout"
 
 type node = {
   date: string,
-  id: string,
   slug: string,
   title: string
 }
@@ -27,7 +26,7 @@ const Index = ({data}: post) => {
           <h2 className="text-2xl text-gray-900 dark:text-white mb-4">Latest posts</h2>
           <ul>
             {data.allWpPost.nodes.map(({slug, title, date}) => (
-              <li className="py-1">
+              <li className="py-1" key={slug}>
                 <Link to={slug}>
                   <span className="text-gray-600 dark:text-gray-400 hover:text-indigo-700 dark:hover:text-indigo-500">
                     {title}
@@ -47,7 +46,6 @@ export const pageQuery = graphql`
   query {
     allWpPost(limit: 8, sort: {fields: date, order: DESC}) {
       nodes {
-        id
         title
         slug
         date(formatString: "MMMM DD, YYYY")

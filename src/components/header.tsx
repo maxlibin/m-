@@ -14,21 +14,20 @@ const links: Array<link> = [
   {label: "About", href: "/about"},
 ]
 
-export default function Layout() {
-  return (
-    <div className="py-4 flex items-center mb-4">
-      <ul className="flex space-x-4">
-        {
-          links.map((link) => (
-            <li className="text-gray hover:text-indigo-800 dark:text-white dark:hover:text-indigo-500">
-              <Link to={link.href}> {link.label} </Link>
-            </li>
-          ))
-        }
-      </ul>
-      <div className="ml-auto">
-        <ThemeToggle />
-      </div>
+const Header = () =>
+  <div className="py-4 flex items-center mb-4">
+    <ul className="flex space-x-4">
+      {
+        links.map(({href, label}) => (
+          <li key={label} className="text-gray hover:text-indigo-800 dark:text-white dark:hover:text-indigo-500">
+            <Link to={href}> {label} </Link>
+          </li>
+        ))
+      }
+    </ul>
+    <div className="ml-auto">
+      <ThemeToggle />
     </div>
-  )
-}
+  </div>
+
+export default Header;
