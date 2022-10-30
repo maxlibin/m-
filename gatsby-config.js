@@ -13,7 +13,7 @@ module.exports = {
          * The full URL of the WordPress site's GraphQL API.
          * Example : 'https://www.example-site.com/graphql'
          */
-        url: `https://wpgatsbydemo.wpengine.com/graphql`,
+        url: `https://b.maxlibin.com/graphql`,
       },
     },
     `gatsby-plugin-react-helmet`,
@@ -29,13 +29,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `maxlibin.com`,
+        short_name: `maxlibin`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/heart.webp`, // This path is relative to the root of the site.
       },
     },
   ],

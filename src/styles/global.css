@@ -12,3 +12,28 @@ body,
 body {
   margin: 0px;
 }
+
+.post p,
+.post .wp-block-image,
+.post .wp-block-code {
+  margin-bottom: 28px;
+}
+
+.post p {
+  word-wrap: break-word;
+}
+
+.post a {
+  color: rgb(99 102 241);
+}
+
+.post a:hover {
+  color: rgb(67 56 202);
+}
+
+.wp-block-code {
+  padding: 28px;
+  background-color: rgb(26 25 59);
+  border-radius: 4px;
+  overflow-x: auto;
+}
