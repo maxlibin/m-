@@ -11,7 +11,6 @@ type link = {
 const links: Array<link> = [
   {label: "Home", href: "/"},
   {label: "Blog", href: "/blog"},
-  {label: "About", href: "/about"},
 ]
 
 const Header = () =>
