@@ -31,13 +31,7 @@ body {
   color: rgb(67 56 202);
 }
 
-pre {
-  padding: 28px;
-  background-color: rgb(26 25 59);
-  border-radius: 4px;
-  overflow-x: auto;
-}
-
 .gatsby-image-wrapper-constrained {
   width: 100%;
+  border-radius: 8px;
 }

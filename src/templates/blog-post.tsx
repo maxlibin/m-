@@ -1,6 +1,11 @@
 import React from "react"
-import Layout from "../components/layout"
 import {graphql} from "gatsby"
+import parse from 'html-react-parser';
+
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import {anOldHope} from 'react-syntax-highlighter/dist/esm/styles/hljs';
+
+import Layout from "../components/layout"
 
 type node = {
   content: string,
@@ -16,6 +21,25 @@ type post = {
   }
 }
 
+const parser = (input: string) =>
+  parse(input, {
+    replace: (domNode: any) => {
+      let language = domNode.rel || 'javascript';
+      if (domNode.tagName === 'pre') {
+        return (
+          <SyntaxHighlighter language={language} style={anOldHope} customStyle={{
+            padding: "28px",
+            backgroundColor: "rgb(26 25 59)",
+            borderRadius: "8px",
+            marginBottom: "28px"
+          }}>
+            {domNode.children[0].children.map((n: any) => n.data).join('')}
+          </SyntaxHighlighter>
+        );
+      }
+    }
+  });
+
 const BlogPost = ({data}: post) => {
   const {allWpPost: {nodes: [{title, content, date}]}} = data;
 
@@ -27,7 +51,11 @@ const BlogPost = ({data}: post) => {
           <h1 className="text-6xl font-bold text-gray-900 dark:text-white">{title}</h1>
         </div>
         <div className="my-2 flex h-1 w-[calc(100%+4rem)] bg-gradient-to-r from-indigo-400 via-green-500 to-pink-500 sm:mx-0 sm:w-full"></div>
-        <div className="mt-8 text-gray-900 dark:text-gray-300 text-xl md:max-w-4xl" dangerouslySetInnerHTML={{__html: content}} />
+        < div className="mt-8 text-gray-900 dark:text-gray-300 text-xl md:max-w-4xl">        {
+          // < div className="mt-8 text-gray-900 dark:text-gray-300 text-xl md:max-w-4xl" dangerouslySetInnerHTML={{__html: content}} />
+          parser(content)
+        }
+        </div>
       </div>
     </Layout>
   )
