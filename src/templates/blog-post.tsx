@@ -33,7 +33,7 @@ const parser = (input: string) =>
             borderRadius: "8px",
             marginBottom: "28px"
           }}>
-            {domNode.children[0].children.map((n: any) => n.data).join('')}
+            {domNode.children[0].children?.map((n: any) => n.data).join('')}
           </SyntaxHighlighter>
         );
       }
