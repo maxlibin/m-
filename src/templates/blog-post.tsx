@@ -1,7 +1,6 @@
 import React from 'react'
 import {graphql} from "gatsby"
 import parse from 'html-react-parser';
-import {SEO} from '../components/seo'
 
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import {anOldHope} from 'react-syntax-highlighter/dist/esm/styles/hljs';
