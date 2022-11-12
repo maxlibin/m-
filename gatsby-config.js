@@ -2,7 +2,10 @@ module.exports = {
   siteMetadata: {
     title: `Max li bin - Frontend developer`,
     description: `I am based in Singapore, have Javascript, React, ReasonMl, ReasonReact projects you'd like to discuss?`,
+    twitterUsername: `@maxlibin`,
     author: `@maxlibin`,
+    image: `data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🤔</text></svg>`,
+    siteUrl: `https://maxlibin.com`,
   },
   plugins: [
     'gatsby-plugin-postcss',
@@ -21,7 +24,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/assets/images`,
       },
     },
     `gatsby-transformer-sharp`,
