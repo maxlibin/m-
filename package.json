@@ -37,7 +37,8 @@
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve",
+    "type-check": "tsc --noEmit --watch"
   },
   "repository": "https://github.com/maxlibin/m-gatsby",
   "bugs": {
