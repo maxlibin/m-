@@ -1,6 +1,7 @@
 import React from "react"
 import {Link} from "gatsby"
 
+import Social from "./social"
 import ThemeToggle from "./toggler"
 
 type link = {
@@ -24,7 +25,8 @@ const Header = () =>
         ))
       }
     </ul>
-    <div className="ml-auto">
+    <div className="ml-auto flex space-x-4 items-center">
+      <Social />
       <ThemeToggle />
     </div>
   </div>
