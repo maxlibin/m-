@@ -41,5 +41,13 @@ module.exports = {
         icon: `src/assets/images/favicon-32x32.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          "UA-55191105-2"
+        ]
+      },
+    },
   ],
 }
