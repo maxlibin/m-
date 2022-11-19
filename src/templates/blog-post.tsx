@@ -51,7 +51,7 @@ const BlogPost = ({data}: post) => {
           <h1 className="text-6xl font-bold text-gray-900 dark:text-white">{title}</h1>
         </div>
         <div className="my-2 flex h-1 w-[calc(100%+4rem)] bg-gradient-to-r from-indigo-400 via-green-500 to-pink-500 sm:mx-0 sm:w-full"></div>
-        < div className="mt-8 text-gray-900 dark:text-gray-300 text-xl md:max-w-4xl">
+        <div className="mt-8 text-gray-900 dark:text-gray-300 text-xl md:max-w-4xl">
           {parser(content)}
         </div>
       </div>

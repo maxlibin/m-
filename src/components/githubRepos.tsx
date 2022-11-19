@@ -17,25 +17,26 @@ const Social = () => {
         <div className="flex space-x-4">
           {
             repos.map(({name, html_url, description, language, updated_at}) => (
-              <div className="border border-gray-500/[.2] rounded p-4 min-w-[380px] flex flex-col" key={name}>
-                <Link
-                  className="text-indigo-700 font-semibold dark:text-indigo-500 hover:text-indigo-500 dark:hover:text-indigo-400"
-                  to={html_url}
-                >
-                  {name}
-                </Link>
-                <p className="mt-2 text-gray-600 dark:text-gray-400 text-sm truncate">{description}</p>
-                <div className="mt-auto text-gray-600 dark:text-gray-400 pt-8 text-sm flex items-center">
-                  <span>
-                    {language}
-                  </span>
-                  <span className="ml-auto text-xs">
-
-                    <span className="text-gray-500/[.5] dark:text-gray-400/[.5] text-xs">
-                      Updated on:{` `}
+              <div className="bg-gradient-to-r from-indigo-400 via-green-500 to-pink-500 rounded min-w-[380px] flex" key={name}>
+                <div className="bg-gray-900 m-[2px] flex flex-col p-4 flex-grow max-w-[calc(100%-4px)]">
+                  <Link
+                    className="text-indigo-700 font-semibold dark:text-indigo-500 hover:text-indigo-500 dark:hover:text-indigo-400"
+                    to={html_url}
+                  >
+                    {name}
+                  </Link>
+                  <p className="mt-2 text-gray-600 dark:text-gray-400 text-sm truncate">{description}</p>
+                  <div className="mt-auto text-gray-600 dark:text-gray-400 pt-8 text-sm flex items-center">
+                    <span>
+                      {language}
                     </span>
-                    {new Date(updated_at).toLocaleDateString()}
-                  </span>
+                    <span className="ml-auto text-xs">
+                      <span className="text-gray-500/[.5] dark:text-gray-400/[.5] text-xs">
+                        Updated on:{` `}
+                      </span>
+                      {new Date(updated_at).toLocaleDateString()}
+                    </span>
+                  </div>
                 </div>
               </div>
             ))
