@@ -1,8 +1,10 @@
 import React from "react"
 import {graphql} from "gatsby"
+
 import Layout from "../components/layout"
 import {SEO} from "../components/seo"
 import LatestPosts from "../components/latestPosts"
+import GithubRepo from "../components/githubRepos"
 
 const Index = ({data}) =>
   <Layout>
@@ -10,6 +12,7 @@ const Index = ({data}) =>
       <h1 className="text-6xl font-bold text-gray-900 dark:text-white pt-8 inline-block">@maxlibin</h1>
       <p className="text-gray-600 dark:text-gray-400 py-2">I am based in Singapore, have Javascript, React, ReasonMl, ReasonReact projects you'd like to discuss?</p>
       <LatestPosts data={data} />
+      <GithubRepo />
     </div>
   </Layout>
 

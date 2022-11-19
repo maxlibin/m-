@@ -22,7 +22,7 @@ const LatestPosts = ({data}: post) => (
     <ul>
       {
         data.allWpPost.nodes.map(({slug, title, date}) => (
-          <li className="py-1" key={slug}>
+          <li className="pb-2" key={slug}>
             <Link to={slug}>
               <span className="text-gray-600 dark:text-gray-400 hover:text-indigo-700 dark:hover:text-indigo-500">
                 {title}
@@ -33,7 +33,7 @@ const LatestPosts = ({data}: post) => (
         ))
       }
     </ul>
-    <div className="mt-6">
+    <div className="mt-4">
       <Link to="/blog" className="text-indigo-700 dark:text-indigo-500 hover:text-indigo-500 dark:hover:text-indigo-400">View all posts →</Link>
     </div>
   </div>
