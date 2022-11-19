@@ -18,7 +18,7 @@ const Social = () => {
           {
             repos.map(({name, html_url, description, language, updated_at}) => (
               <div className="bg-gradient-to-r from-indigo-400 via-green-500 to-pink-500 rounded min-w-[380px] flex" key={name}>
-                <div className="bg-gray-900 m-[2px] flex flex-col p-4 flex-grow max-w-[calc(100%-4px)]">
+                <div className="bg-white dark:bg-gray-900 m-[2px] flex flex-col p-4 flex-grow max-w-[calc(100%-4px)]">
                   <Link
                     className="text-indigo-700 font-semibold dark:text-indigo-500 hover:text-indigo-500 dark:hover:text-indigo-400"
                     to={html_url}
