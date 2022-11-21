@@ -26,9 +26,6 @@ const parser = (input: string) =>
     replace: (domNode: any) => {
       let language = domNode.rel || 'javascript';
       if (domNode.tagName === 'pre') {
-        console.log(
-          domNode.children[0]
-        );
         return (
           <SyntaxHighlighter language={language} style={anOldHope} customStyle={{
             padding: "28px",
