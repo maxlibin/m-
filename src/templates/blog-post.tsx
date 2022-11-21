@@ -26,12 +26,16 @@ const parser = (input: string) =>
     replace: (domNode: any) => {
       let language = domNode.rel || 'javascript';
       if (domNode.tagName === 'pre') {
+        console.log(
+          domNode.children[0]
+        );
         return (
           <SyntaxHighlighter language={language} style={anOldHope} customStyle={{
             padding: "28px",
             backgroundColor: "rgb(26 25 59)",
             borderRadius: "8px",
-            marginBottom: "28px"
+            marginBottom: "28px",
+            borderLeft: "8px solid #6611e2"
           }}>
             {domNode.children[0].children?.map((n: any) => n.data).join('')}
           </SyntaxHighlighter>
