@@ -2,14 +2,14 @@ import React from "react"
 import {Link, graphql} from "gatsby"
 import Layout from "../components/layout"
 
-type node = {
+interface node {
   date: string,
   excerpt: string,
   slug: string,
   title: string
 }
 
-type post = {
+interface post {
   data: {
     allWpPost: {
       nodes: Array<node>

@@ -6,15 +6,21 @@ import {SEO} from "../components/seo"
 import LatestPosts from "../components/latestPosts"
 import GithubRepo from "../components/githubRepos"
 
-const Index = ({data}) =>
-  <Layout>
-    <div className="mt-8">
-      <h1 className="text-6xl font-bold text-gray-900 dark:text-white pt-8 inline-block">@maxlibin</h1>
-      <p className="text-gray-600 dark:text-gray-400 py-2">I am based in Singapore, have Javascript, React, ReasonMl, ReasonReact projects you'd like to discuss?</p>
-      <LatestPosts data={data} />
-      <GithubRepo />
-    </div>
-  </Layout>
+const title = "@maxlibin"
+const description = "I am based in Singapore, have Javascript, React, ReasonMl, ReasonReact projects you'd like to discuss?"
+
+const Index = ({data}) => {
+  return (
+    <Layout>
+      <div className="mt-8">
+        <h1 className="text-6xl font-bold text-gray-900 dark:text-white pt-8 inline-block">{title}</h1>
+        <p className="text-gray-600 dark:text-gray-400 py-2">{description}</p>
+        <LatestPosts data={data.allWpPost} />
+        <GithubRepo data={data.allGithubRepos} />
+      </div>
+    </Layout>
+  )
+}
 
 export const pageQuery = graphql`
   query {
@@ -23,6 +29,15 @@ export const pageQuery = graphql`
         title
         slug
         date(formatString: "MMMM DD, YYYY")
+      }
+    }
+    allGithubRepos {
+      nodes {
+        name
+        html_url
+        description
+        language
+        updated_at(formatString: "MMMM DD, YYYY")
       }
     }
   }
