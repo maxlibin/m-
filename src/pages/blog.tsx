@@ -30,7 +30,7 @@ const Blog = ({data}: post) => {
                 {title}
               </Link>
             </h3>
-            <div className="mb-4 flex h-1 w-[calc(100%+4rem)] bg-gradient-to-r from-indigo-400 via-green-500 to-pink-500 sm:mx-0 sm:w-full"></div>
+            <div className="mb-4 flex h-1 w-[calc(100%+4rem)] bg-gradient-to-r from-indigo-400 via-green-500 to-pink-500 sm:mx-0 sm:w-full rounded"></div>
             <div className="text-sm text-gray-900 dark:text-gray-400 mb-2" dangerouslySetInnerHTML={{__html: excerpt}} />
           </div>
         ))}
