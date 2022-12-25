@@ -47,6 +47,7 @@ const BlogPost = ({data}: post) => {
   return (
     <Layout>
       <Helmet>
+        <title>{title}</title>
         <script src="https://giscus.app/client.js"
           data-repo="maxlibin/maxlibin.com"
           data-repo-id="MDEwOlJlcG9zaXRvcnkxNzQ3MTQ5MTg="
