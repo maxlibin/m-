@@ -35,3 +35,24 @@ body {
   width: 100%;
   border-radius: 8px;
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(66,57,157);
+  background: linear-gradient(153deg, rgba(66,57,157,1) 0%, rgba(7,190,27,1) 47%, rgba(210,0,230,1) 100%);
+  border-radius: 8px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid #000;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
