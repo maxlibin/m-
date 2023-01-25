@@ -7,7 +7,7 @@ import LatestPosts from "../components/latestPosts"
 import GithubRepo from "../components/githubRepos"
 
 const title = "@maxlibin"
-const description = "I am based in Singapore, have Javascript, React, ReasonMl, ReasonReact projects you'd like to discuss?"
+const description = "I am based in Singapore, have Javascript, React, ReasonMl, Rescript, ReasonReact, RescriptReact projects you'd like to discuss?"
 
 const Index = ({data}) => {
   return (
