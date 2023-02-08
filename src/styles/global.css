@@ -52,3 +52,10 @@ body {
   border: 1px solid #000;
   border-radius: 8px;
 }
+
+p code {
+  background: #1a193b;
+  padding: 2px 8px;
+  border-radius: 4px;
+  border-left: 2px solid rgb(102, 17, 226);
+}
