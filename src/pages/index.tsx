@@ -1,5 +1,6 @@
 import React from "react"
 import {graphql} from "gatsby"
+import GitHubCalendar from "react-github-calendar";
 
 import Layout from "../components/layout"
 import {SEO} from "../components/seo"
@@ -17,6 +18,9 @@ const Index = ({data}) => {
         <p className="text-gray-600 dark:text-gray-400 py-2">{description}</p>
         <LatestPosts data={data.allWpPost} />
         <GithubRepo data={data.allGithubRepos} />
+        <div className="mt-8">
+          <GitHubCalendar username="maxlibin" blockSize={20} blockMargin={2} />
+        </div>
       </div>
     </Layout>
   )
