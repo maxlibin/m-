@@ -10,6 +10,14 @@ import GithubRepo from "../components/githubRepos"
 const title = "@maxlibin"
 const description = "I am based in Singapore, have Javascript, React, ReasonMl, Rescript, ReasonReact, RescriptReact projects you'd like to discuss?"
 
+const colorTheme = {
+  "level0": '#f5eaea',
+  "level1": '#dfc7e8',
+  "level2": '#ffb84c',
+  "level3": '#f16767',
+  "level4": '#a459d1',
+}
+
 const Index = ({data}) => {
   return (
     <Layout>
@@ -18,8 +26,8 @@ const Index = ({data}) => {
         <p className="text-gray-600 dark:text-gray-400 py-2">{description}</p>
         <LatestPosts data={data.allWpPost} />
         <GithubRepo data={data.allGithubRepos} />
-        <div className="mt-8">
-          <GitHubCalendar username="maxlibin" blockSize={20} blockMargin={2} />
+        <div className="mt-8 dark:text-white">
+          <GitHubCalendar username="maxlibin" blockSize={17} blockMargin={6} theme={colorTheme} />
         </div>
       </div>
     </Layout>
