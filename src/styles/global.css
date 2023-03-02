@@ -28,8 +28,8 @@ h4 {
   margin: 0 0 2rem 2rem;
 }
 
-ul { list-style: square; }
-ol { list-style: decimal; }
+.post ul { list-style: square; }
+.post ol { list-style: decimal; }
 
 .post p,
 .post .wp-block-image,
