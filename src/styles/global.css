@@ -23,7 +23,8 @@ h4 {
   margin: 0 0 1.2rem;
 }
 
-ul, ol {
+.post ul,
+.post ol {
   margin: 0 0 2rem 2rem;
 }
 
