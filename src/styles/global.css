@@ -9,14 +9,26 @@ body,
   height: 100%;
 }
 
-body {
-  margin: 0px;
+body { margin: 0px; }
+
+h1, h2, h3, h4, h5, h6 { font-weight: bold; }
+
+h3 {
+  font-size: 2rem;
+  margin: 0 0 1.5rem;
 }
 
-ol {
-  list-style: decimal;
-  margin: 0 0 0 2rem;
+h4 {
+  font-size: 1.5rem;
+  margin: 0 0 1.2rem;
 }
+
+ul, ol {
+  margin: 0 0 2rem 2rem;
+}
+
+ul { list-style: square; }
+ol { list-style: decimal; }
 
 .post p,
 .post .wp-block-image,
