@@ -46,12 +46,18 @@ module.exports = {
       },
     },
     {
+      siteMetadata: {
+        siteUrl: `https://www.maxlibin.com`,
+      },
+      plugins: [`gatsby-plugin-sitemap`]
+    },
+    {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: 'https://www.maxlibin.com',
-        sitemap: 'https://www.maxlibin.com/sitemap.xml',
-        policy: [{userAgent: '*', allow: ''}]
+        sitemap: 'https://www.maxlibin.com/sitemap-index.xml',
+        policy: [{userAgent: '*', disallow: ''}]
       }
-    }
+    },
   ],
 }
