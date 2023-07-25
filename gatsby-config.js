@@ -45,12 +45,7 @@ module.exports = {
         ]
       },
     },
-    {
-      siteMetadata: {
-        siteUrl: `https://www.maxlibin.com`,
-      },
-      plugins: [`gatsby-plugin-sitemap`]
-    },
+    'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
