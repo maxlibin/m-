@@ -8,7 +8,7 @@ module.exports = {
     siteUrl: `https://maxlibin.com`,
   },
   plugins: [
-    'gatsby-plugin-postcss',
+    "gatsby-plugin-postcss",
     {
       resolve: `gatsby-source-wordpress`,
       options: {
@@ -40,19 +40,18 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingIds: [
-          "G-G0B3GHYF90"
-        ]
+        trackingIds: ["G-G0B3GHYF90"],
       },
     },
-    'gatsby-plugin-sitemap',
+    "gatsby-plugin-sitemap",
     {
-      resolve: 'gatsby-plugin-robots-txt',
+      resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: 'https://www.maxlibin.com',
-        sitemap: 'https://www.maxlibin.com/sitemap-index.xml',
-        policy: [{userAgent: '*', disallow: ''}]
-      }
+        host: "https://www.maxlibin.com",
+        sitemap: "https://www.maxlibin.com/sitemap-index.xml",
+        policy: [{ userAgent: "*", disallow: "" }],
+      },
     },
   ],
+  trailingSlash: "always",
 }
