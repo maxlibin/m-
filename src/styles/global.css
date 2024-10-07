@@ -61,6 +61,11 @@ h4 {
 .post a:hover {
   color: rgb(67 56 202);
 }
+.post h1 {
+  font-size: 34px;
+  margin-bottom: 40px;
+  line-height: normal;
+}
 
 .gatsby-image-wrapper-constrained {
   width: 100%;
