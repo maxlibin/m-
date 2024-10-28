@@ -1,5 +1,4 @@
 import React from "react"
-import {Link} from "gatsby"
 import {AiOutlineGithub as GithubIcon, AiOutlineTwitter as TwitterIcon} from "react-icons/ai";
 
 type social = {
@@ -22,7 +21,7 @@ const Social = () =>
           className="text-gray hover:text-indigo-800 dark:text-white dark:hover:text-indigo-500 text-xl"
           title={label}
         >
-          <Link to={href}> {icon} </Link>
+          <a href={href}> {icon} </a>
         </li>
       ))
     }

@@ -1,5 +1,4 @@
 import React from "react"
-import {Link} from "gatsby"
 
 interface node {
   name: string;
@@ -25,12 +24,12 @@ const GithubRepo = ({data}: post) => {
             data.nodes.map(({name, html_url, description, language, updated_at}) => (
               <div className="bg-gradient-to-r from-indigo-400 via-green-500 to-pink-500 rounded min-w-[380px] flex" key={name}>
                 <div className="bg-white dark:bg-gray-900 m-[2px] flex flex-col p-4 flex-grow max-w-[calc(100%-4px)]">
-                  <Link
+                  <a
                     className="text-indigo-700 font-semibold dark:text-indigo-500 hover:text-indigo-500 dark:hover:text-indigo-400"
-                    to={html_url}
+                    href={html_url}
                   >
                     {name}
-                  </Link>
+                  </a>
                   <p className="mt-2 text-gray-600 dark:text-gray-400 text-sm truncate">{description}</p>
                   <div className="mt-auto text-gray-600 dark:text-gray-400 pt-8 text-sm flex items-center">
                     <span>
