@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import GitHubCalendar from "react-github-calendar"
 
 import Layout from "../components/layout"
-import { SEO } from "../components/seo"
+import  SEO  from "../components/seo"
 import LatestPosts from "../components/latestPosts"
 import GithubRepo from "../components/githubRepos"
 import Books from "../components/books"

@@ -1,7 +1,9 @@
 import React from "react"
+
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Books from "../components/books"
+import SEO from "../components/seo"
 
 interface node {
   date: string
@@ -63,3 +65,5 @@ export const pageQuery = graphql`
 `
 
 export default Blog
+
+export const Head = () => <SEO title="Blog | Insights, Tutorials, and Guides for Developers" description="Explore our blog for the latest insights, tutorials, and guides on web development, AI-powered tools, and innovative technologies. Stay updated with expert knowledge and practical tips." />

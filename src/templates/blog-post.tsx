@@ -6,6 +6,7 @@ import SyntaxHighlighter from "react-syntax-highlighter"
 import { anOldHope } from "react-syntax-highlighter/dist/esm/styles/hljs"
 
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 import Books from "../components/books"
 
 type node = {
@@ -58,12 +59,12 @@ const BlogPost = ({ data }: post) => {
     <Layout>
       <Helmet>
         <title>{title}</title>
-        <script
-          src="https://giscus.app/client.js"
+        <meta name="description" content={`Explore ${title} and discover insights, tips, and tools to help you succeed. Dive into the full guide now!`} />
+        <script src="https://giscus.app/client.js"
           data-repo="maxlibin/maxlibin.com"
           data-repo-id="MDEwOlJlcG9zaXRvcnkxNzQ3MTQ5MTg="
-          data-category="Q&A"
-          data-category-id="DIC_kwDOCmnwJs4CTNwP"
+          data-category="General"
+          data-category-id="DIC_kwDOCmnwJs4CTNwO"
           data-mapping="pathname"
           data-strict="0"
           data-reactions-enabled="1"
@@ -72,19 +73,18 @@ const BlogPost = ({ data }: post) => {
           data-theme="preferred_color_scheme"
           data-lang="en"
           crossorigin="anonymous"
-          async
-        ></script>
+          async>
+        </script>
       </Helmet>
       <div className="post">
         <div className="text-xs text-gray-700 dark:text-gray-500 py-8">
           <div className="text-xs text-gray-700 dark:text-gray-500 mb-2">
             {date}
           </div>
-          <h1 className="text-6xl font-bold text-gray-900 dark:text-white">
+          <h1 className="text-6xl leading-snug font-bold text-gray-900 dark:text-white">
             {title}
           </h1>
         </div>
-        <div className="my-2 flex h-1 w-full bg-gradient-to-r from-indigo-400 via-green-500 to-pink-500 sm:mx-0 sm:w-full rounded"></div>
         <div className="mt-8 text-gray-900 dark:text-gray-300 text-xl md:max-w-4xl">
           {parser(content)}
         </div>
@@ -102,6 +102,7 @@ export const query = graphql`
     allWpPost(filter: { slug: { eq: $slug } }) {
       nodes {
         title
+        excerpt
         date(formatString: "MMMM DD, YYYY")
         content
       }
@@ -110,3 +111,5 @@ export const query = graphql`
 `
 
 export default BlogPost
+
+export const Head = () => <SEO />

@@ -8,7 +8,7 @@ interface props {
   children?: React.ReactNode
 }
 
-export const SEO = ({title, description, pathname, children}: props) => {
+const SEO = ({title, description, pathname, children}: props) => {
   const {
     title: defaultTitle,
     description: defaultDescription,
@@ -41,3 +41,5 @@ export const SEO = ({title, description, pathname, children}: props) => {
     </>
   )
 }
+
+export default SEO;
