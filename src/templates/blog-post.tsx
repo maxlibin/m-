@@ -6,7 +6,6 @@ import SyntaxHighlighter from "react-syntax-highlighter"
 import { anOldHope } from "react-syntax-highlighter/dist/esm/styles/hljs"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
 import Books from "../components/books"
 
 type node = {
@@ -60,6 +59,9 @@ const BlogPost = ({ data }: post) => {
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={`Explore ${title} and discover insights, tips, and tools to help you succeed. Dive into the full guide now!`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={`Explore ${title} and discover insights, tips, and tools to help you succeed. Dive into the full guide now!`} />
         <script src="https://giscus.app/client.js"
           data-repo="maxlibin/maxlibin.com"
           data-repo-id="MDEwOlJlcG9zaXRvcnkxNzQ3MTQ5MTg="
@@ -111,5 +113,3 @@ export const query = graphql`
 `
 
 export default BlogPost
-
-export const Head = () => <SEO />
